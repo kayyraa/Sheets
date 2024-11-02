@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="images/Favicon.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="scripts/style/format.css">
+        <link rel="stylesheet" href="scripts/style/style.css">
+
+        <script type="module" src="scripts/api.js"></script>
+        <script type="module" src="scripts/grid.js"></script>
+        <script type="module" src="scripts/controls.js"></script>
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459062960654803" crossorigin="anonymous"></script>
+
+        <title>Sheets</title>
+    </head>
+    <body>
+        <topbar>
+            <img draggable="false" src="images/Logo.svg">
+            <div class="FileActions">
+                <button class="NewFileButton"><header>New</header></button>
+                <vr></vr>
+            </div>
+        </topbar>
+        <content>
+            <div class="HorizontalRuler">
+                <span class="SelectionNameLabel">No Selection</span>
+                <vr></vr>
+                <span class="SelectionValueLabel">None</span>
+            </div>
+            <div class="Grid"></div>
+            <bottombar>
+                <button disabled class="UndoButton"><img src="images/Undo.svg"></button>
+                <button disabled class="RedoButton"><img src="images/Redo.svg"></button>
+                <vr></vr>
+                <div>
+                    <span class="ColumnLabel">Col: 00</span>
+                    <span class="RowLabel">Row: 00</span>
+                    <span class="KeyLabel">Key: A</span>
+                </div>
+            </bottombar>
+        </content>
+    </body>
+</html>
