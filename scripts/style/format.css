@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('./format.css');
+
+body {
+    background-color: white;
+    color: white;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: "SegoeUi", monospace;
+}
+
+* {
+    font-family: "SegoeUi", monospace;
+    transition: all 0.25s ease;
+}
+
+input[type="color"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    height: 4em;
+    width: 4vw;
+
+    border: none;
+    outline: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+    color: white;
+
+    border-radius: 4px;
+
+    height: 100%;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+button > img {
+    height: 2.5em;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+button:not(:disabled) > img:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+button:not(:disabled):not(:has(img)):hover {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+bottombar {
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 33px;
+
+    background-color: rgb(60, 130, 60);
+}
+
+topbar {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 12vh;
+    width: 100%;
+
+    background-color: rgb(60, 130, 60);
+}
+
+topbar div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+topbar > * {
+    padding: 2vh;
+}
+
+topbar > * {
+    color: #D9D9D9;
+}
+
+topbar > *:first-child {
+    padding-left: 1em;
+}
+
+vr {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+
+    margin-left: 12px;
+    margin-right: 12px;
+
+    opacity: 0.5;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    top: 12vh;
+
+    width: 100%;
+    height: 88vh;
+}
+
+header {
+    font-size: 4vh;
+}
+
+div[button] {
+    background-color: rgba(255, 255, 255, 0.125);
+
+    font-size: 16px;
+
+    padding-top: 2.25vh;
+    padding-bottom: 2.25vh;
+    min-width: 3vw;
+
+    justify-content: center;
+}
+
+div[button][disabled] {
+    opacity: 0.5;
+}
+div[button]:not([disabled]) {
+    cursor: pointer;
+}
+div[button]:not([disabled]) * {
+    cursor: pointer;
+}
+div[button][disabled] * {
+    cursor: default;
+}
+
+div[button] * {
+    font-size: 16px;
+}
+
+div[button]:not([disabled]):hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.ContextMenu {
+    display: none;
+
+    z-index: 2;
+
+    position: fixed;
+
+    background-color: rgb(40, 40, 40);
+
+    min-width: 250px;
+    
+    padding-bottom: 7.5px;
+    padding-top: 7.5px;
+
+    box-shadow: 0 0 10px rgb(40, 40, 40);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+
+    transition: opacity 0.25s ease;
+}
+
+.ContextMenu > * {
+    padding-left: 7.5px;
+    transition: none;
+}
+
+.ContextMenu > div,
+.ContextMenu > div {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 4vh;
+}
+
+.ContextMenu > div > span,
+.ContextMenu > div > div > span {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.ContextMenu div[danger]:not([disabled]) > span,
+.ContextMenu div[danger]:not([disabled]) > samp {
+    color: rgb(225, 0, 0);
+}
+
+.ContextMenu div[danger][disabled] > span,
+.ContextMenu div[danger][disabled] > samp {
+    color: white;
+}
+
+.ContextMenu > div > samp,
+.ContextMenu > div > div > samp {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1.75em;
+    text-align: right;
+}
+
+.ContextMenu > div[disabled],
+.ContextMenu > div > div[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ContextMenu > div:not([disabled]):hover,
+.ContextMenu > div > div:not([disabled]):hover {
+    background-color: rgba(255, 255, 255, 0.075);
+    cursor: pointer;
+}
+
+.ContextMenu hr {
+    opacity: 0.5;
+
+    border: none;
+    background-color: white;
+    height: 1px;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "SegoeUi";
+    src: url("../../fonts/SegoeUi.ttf") format("truetype");
+}
+
+@media screen and (max-width: 600px) {
+    button > img {
+        height: 2.5vh;
+    }
+
+    bottombar > button {
+        margin-top: 4px;
+    }
+}
