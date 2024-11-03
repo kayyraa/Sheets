@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="images/Favicon.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="scripts/style/format.css">
+        <link rel="stylesheet" href="scripts/style/style.css">
+
+        <script type="module" src="scripts/api.js"></script>
+        <script type="module" src="scripts/grid.js"></script>
+        <script type="module" src="scripts/controls.js"></script>
+
+	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459062960654803" crossorigin="anonymous"></script>
+
+        <title>Sheets</title>
+    </head>
+    <body>
+        <div class="ContextMenu">
+            <div href="116" onclick="location.reload()">
+                <span>Reload</span>
+                <samp>F5</samp>
+            </div>
+            <hr>
+            <div href="48" danger disabled onclick="window.ItemSelection !== 'None' && window.ItemSelection.remove()" class="ItemDependent">
+                <span>Remove</span>
+                <samp>Del</samp>
+            </div>
+            <div disabled onclick="window.ItemSelection !== 'None' && (window.ItemSelection.querySelector('input').value = '')" class="ItemDependent">
+                <span>Clear</span>
+            </div>
+            <hr>
+            <div href="49" function="Style">
+                <span>Change</span>
+                <samp>Ctrl+S</samp>
+            </div>
+        </div>
+        <topbar>
+            <img class="Logo" draggable="false" src="images/Logo.svg">
+            <div class="FileActions">
+                <button class="NewFileButton"><header>New</header></button>
+            </div>
+        </topbar>
+        <content>
+            <div class="HorizontalRuler">
+                <span class="SelectionNameLabel">No Selection</span>
+                <vr></vr>
+                <span class="SelectionValueLabel">None</span>
+            </div>
+            <div class="Grid"></div>
+        </content>
+        <bottombar>
+            <button disabled class="UndoButton"><img src="images/Undo.svg"></button>
+            <button disabled class="RedoButton"><img src="images/Redo.svg"></button>
+            <button class="ZoomInButton"><img src="images/ZoomIn.svg"></button>
+            <button class="ZoomOutButton"><img src="images/ZoomOut.svg"></button>
+            <vr></vr>
+            <div>
+                <span class="ColumnRowLabel">A, 00, 00</span>
+            </div>
+            <vr></vr>
+            <span class="ZoomLabel">Zoom: 1.00x</span>
+        </bottombar>
+    </body>
+</html>
