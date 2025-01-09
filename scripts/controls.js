@@ -2,6 +2,7 @@ import * as Grid from "./grid.js";
 import * as Api from "./api.js";
 
 let ScaleFactor = 1;
+window.Api = Api;
 
 document.addEventListener("wheel", (Event) => {
     if (Event.ctrlKey) {
