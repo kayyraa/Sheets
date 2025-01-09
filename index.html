@@ -142,13 +142,13 @@
                     <samp>Code</samp>
                     <textarea class="CodeInput">
 async function Setup() {
-    // Runs once then never
-    const Api = await import("./api.js");
+    // Runs once and never
+    const Api = window.Api;
     console.log("Loaded");
 }
 
 function Loop() {
-    // Loop every frame
+    // Runs every frame
     requestAnimationFrame(Loop);
 }
 
