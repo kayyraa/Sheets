@@ -206,7 +206,6 @@ Array.from(Grid.ContextMenu.children).forEach(Item => {
                 };
 
                 document.querySelectorAll(".InsertCodeButton")[0].onclick = () => {
-                    console.log("A");
                     eval(document.querySelectorAll(".CodeInput")[0].value);
                 };
             }
